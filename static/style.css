@@ -1,0 +1,51 @@
+.header {
+    background: linear-gradient(135deg, #6e7dd5, #2a2e58);
+    padding: 20px;
+    text-align: center;
+}
+
+.button {
+    background: linear-gradient(45deg, #64b3f4, #3f88c5);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(45deg, #3f88c5, #64b3f4);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.game-element {
+    animation: slideIn 0.5s ease forwards;
+}
+
+@media (max-width: 768px) {
+    .button {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px;
+}
