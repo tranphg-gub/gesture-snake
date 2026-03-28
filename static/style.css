@@ -1,51 +1,48 @@
-.header {
-    background: linear-gradient(135deg, #6e7dd5, #2a2e58);
-    padding: 20px;
-    text-align: center;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f8d9e8 0%, #f4a261 100%);
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #264653;
+    font-size: 3rem;
 }
 
 .button {
-    background: linear-gradient(45deg, #64b3f4, #3f88c5);
-    border: none;
-    color: white;
     padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    background: #2a9d8f;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
     transition: background 0.3s ease;
 }
 
 .button:hover {
-    background: linear-gradient(45deg, #3f88c5, #64b3f4);
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.game-element {
-    animation: slideIn 0.5s ease forwards;
+    background: #264653;
 }
 
 @media (max-width: 768px) {
-    .button {
-        width: 100%;
-        padding: 10px;
+    h1 {
+        font-size: 2rem;
     }
-}
-
-.game-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 50px;
+    .button {
+        font-size: 1.25rem;
+        padding: 10px 20px;
+    }
 }
